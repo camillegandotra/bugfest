@@ -1,0 +1,127 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Wed May 31 10:56:48 2023
+| Host         : BELSPC0009 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_lab6_control_sets_placed.rpt
+| Design       : top_lab6
+| Device       : xc7a35t
+-------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    49 |
+|    Minimum number of control sets                        |    49 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   209 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    49 |
+| >= 0 to < 4        |     2 |
+| >= 4 to < 6        |    41 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     4 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     2 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              47 |           15 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              21 |           10 |
+| Yes          | No                    | No                     |             163 |           64 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              40 |           16 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++------------------------------+---------------------------------------------------+---------------------------------------------------+------------------+----------------+
+|         Clock Signal         |                   Enable Signal                   |                  Set/Reset Signal                 | Slice Load Count | Bel Load Count |
++------------------------------+---------------------------------------------------+---------------------------------------------------+------------------+----------------+
+|  not_so_slow/slowclk/clk_out | gameSM/idleS                                      |                                                   |                1 |              1 |
+|  not_so_slow/slowclk/clk_out | flasher/counter3_0/CE                             |                                                   |                1 |              2 |
+|  not_so_slow/slowclk/clk_out | not_so_slow/slowclk/XLXI_39/CEO                   |                                                   |                3 |              4 |
+|  not_so_slow/slowclk/clk_out |                                                   | pixel/horCounter/counter15_8/counter3_0/FDRE_btnR |                1 |              4 |
+|  not_so_slow/slowclk/clk_out | player/verCounter/counter15_8/counter7_4/CE_0     |                                                   |                1 |              4 |
+|  not_so_slow/slowclk/clk_out | plat_three/horCounter/counter7_0/counter3_0/CE_0  |                                                   |                1 |              4 |
+|  not_so_slow/slowclk/clk_out | plat_three/horCounter/counter7_0/counter3_0/CE_1  |                                                   |                1 |              4 |
+|  not_so_slow/slowclk/clk_out | plat_two/horCounter/counter15_8/counter3_0/CE_0   |                                                   |                3 |              4 |
+|  not_so_slow/slowclk/clk_out | pixel/horCounter/counter7_0/counter3_0/frame      |                                                   |                1 |              4 |
+|  not_so_slow/slowclk/clk_out | player/horCounter/counter15_8/counter3_0/CE_0     |                                                   |                2 |              4 |
+|  not_so_slow/slowclk/clk_out | plat_two/horCounter/counter7_0/counter3_0/CE_0    |                                                   |                2 |              4 |
+|  not_so_slow/slowclk/clk_out | plat_two/horCounter/counter7_0/counter7_4/CE_0    |                                                   |                2 |              4 |
+|  not_so_slow/slowclk/clk_out | player/verCounter/counter7_0/counter3_0/CE_1      |                                                   |                2 |              4 |
+|  not_so_slow/slowclk/clk_out | not_so_slow/slowclk/XLXI_38/I_36_31_n_0           |                                                   |                2 |              4 |
+|  not_so_slow/slowclk/clk_out | player/verCounter/counter7_0/counter3_0/CE_0      |                                                   |                3 |              4 |
+|  not_so_slow/slowclk/clk_out | bug_one/horCounter/counter15_8/counter3_0/CE_0    |                                                   |                1 |              4 |
+|  not_so_slow/slowclk/clk_out | not_so_slow/slowclk/XLXI_40/CEO                   |                                                   |                2 |              4 |
+|  not_so_slow/slowclk/clk_out | bug_one/horCounter/counter7_0/counter3_0/CE_0     |                                                   |                1 |              4 |
+|  not_so_slow/slowclk/clk_out | bug_one/horCounter/counter7_0/counter7_4/CE_0     |                                                   |                1 |              4 |
+|  not_so_slow/slowclk/clk_out | not_so_slow/slowclk/XLXI_45/CEO                   | buttonR                                           |                1 |              4 |
+|  not_so_slow/slowclk/clk_out | scoreCounter/counter3_0/CE                        | buttonR                                           |                2 |              4 |
+|  not_so_slow/slowclk/clk_out | timer/counter3_0/CE_0                             |                                                   |                2 |              4 |
+|  not_so_slow/slowclk/clk_out | timer/counter7_4/incScore                         | buttonR                                           |                1 |              4 |
+|  not_so_slow/slowclk/clk_out | pixel/horCounter/counter7_0/counter3_0/CE         |                                                   |                2 |              4 |
+|  not_so_slow/slowclk/clk_out | gameSM/CE_5                                       |                                                   |                2 |              4 |
+|  not_so_slow/slowclk/clk_out | pixel/horCounter/counter7_0/counter3_0/utc_0[0]   | pixel/horCounter/counter15_8/counter3_0/FDRE_btnR |                3 |              4 |
+|  not_so_slow/slowclk/clk_out | pixel/horCounter/counter7_0/counter7_4/CE_0       |                                                   |                3 |              4 |
+|  not_so_slow/slowclk/clk_out | pixel/horCounter/counter7_0/counter7_4/utc[0]     | pixel/horCounter/counter15_8/counter3_0/FDRE_btnR |                1 |              4 |
+|  not_so_slow/slowclk/clk_out | pixel/horCounter/counter15_8/counter3_0/Up0       | pixel/horCounter/counter15_8/counter3_0/FDRE_btnR |                2 |              4 |
+|  not_so_slow/slowclk/clk_out | pixel/horCounter/counter15_8/counter3_0/horR      | pixel/verCounter/counter15_8/counter3_0/FDRE_btnR |                2 |              4 |
+|  not_so_slow/slowclk/clk_out | plat_three/horCounter/counter15_8/counter3_0/CE_0 |                                                   |                1 |              4 |
+|  not_so_slow/slowclk/clk_out | plat_one/horCounter/counter7_0/counter7_4/CE_1    |                                                   |                2 |              4 |
+|  not_so_slow/slowclk/clk_out | plat_one/horCounter/counter7_0/counter3_0/CE_0    |                                                   |                2 |              4 |
+|  not_so_slow/slowclk/clk_out | plat_one/horCounter/counter7_0/counter3_0/CE_1    |                                                   |                1 |              4 |
+|  not_so_slow/slowclk/clk_out | player/horCounter/counter7_0/counter3_0/CE_0      |                                                   |                2 |              4 |
+|  not_so_slow/slowclk/clk_out | player/horCounter/counter7_0/counter7_4/CE_0      |                                                   |                1 |              4 |
+|  not_so_slow/slowclk/clk_out | pixel/verCounter/counter7_0/counter7_4/Up0        | pixel/verCounter/counter15_8/counter3_0/FDRE_btnR |                2 |              4 |
+|  not_so_slow/slowclk/clk_out | pixel/verCounter/counter15_8/counter3_0/Up0_0     | pixel/verCounter/counter15_8/counter3_0/FDRE_btnR |                1 |              4 |
+|  not_so_slow/slowclk/clk_out | pixel/verCounter/counter7_0/counter3_0/Up0_0      | pixel/verCounter/counter15_8/counter3_0/FDRE_btnR |                1 |              4 |
+|  not_so_slow/slowclk/clk_out | gameSM/CE_11                                      |                                                   |                2 |              4 |
+|  not_so_slow/slowclk/clk_out | gameSM/CE                                         |                                                   |                2 |              4 |
+|  not_so_slow/slowclk/clk_out | gameSM/CE_0                                       |                                                   |                2 |              4 |
+|  not_so_slow/slowclk/clk_out | player/verCounter/counter7_0/counter7_4/CE_2      |                                                   |                2 |              4 |
+|  not_so_slow/slowclk/clk_out | plat_two/widthS/counter7_0/counter3_0/FDRE1_0     |                                                   |                2 |             10 |
+|  not_so_slow/slowclk/clk_out | bug_one/horCounter/counter15_8/counter7_4/LD0     |                                                   |                2 |             10 |
+|  not_so_slow/slowclk/clk_out | plat_one/widthS/counter7_0/counter3_0/FDRE1_0     |                                                   |                2 |             10 |
+|  not_so_slow/slowclk/clk_out | plat_three/widthS/counter7_0/counter3_0/FDRE1_0   |                                                   |                2 |             10 |
+|  not_so_slow/slowclk/clk_out |                                                   | buttonR                                           |                9 |             17 |
+|  not_so_slow/slowclk/clk_out |                                                   |                                                   |               15 |             47 |
++------------------------------+---------------------------------------------------+---------------------------------------------------+------------------+----------------+
+
+

@@ -1,0 +1,14 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../Lab6.srcs/sources_1/new/LFSR.v" \
+"../../../../Lab6.srcs/sources_1/new/countUD16L.v" \
+"../../../../Lab6.srcs/sources_1/imports/new/countUD4L.v" \
+"../../../../Lab6.srcs/sources_1/imports/new/countUD8L.v" \
+"../../../../Lab6.srcs/sources_1/new/platform.v" \
+"../../../../Lab6.srcs/sources_1/new/test_platform.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

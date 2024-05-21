@@ -1,0 +1,16 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../Lab6.srcs/sources_1/new/border.v" \
+"../../../../Lab6.srcs/sources_1/new/countUD16L.v" \
+"../../../../../Lab5/Lab5.srcs/sources_1/new/countUD4L.v" \
+"../../../../../Lab5/Lab5.srcs/sources_1/new/countUD8L.v" \
+"../../../../Lab6.srcs/sources_1/new/pixelAddress.v" \
+"../../../../Lab6.srcs/sources_1/new/pond.v" \
+"../../../../Lab6.srcs/sources_1/new/syncs.v" \
+"../../../../Lab6.srcs/sources_1/new/test_vga.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
